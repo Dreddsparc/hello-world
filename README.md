@@ -11,6 +11,6 @@ It will will display this message in a Kivy app in a gui window.
 
 Future additions: 
     After much study and hair pulling trial and error I suppose,
-    1. A button to let you get a new greeting rather than closing the window are running
+    1. A button to let you get a new greeting rather than closing the window and running
        the program over and over. (cause that just got boring quick.)
     2. Jeez man!  Lemme get 1. out of the way first! 
