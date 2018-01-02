@@ -14,10 +14,21 @@
 #
 ##########################################################################################
 from random import *
+import kivy
+from kivy.app import App
+from kivy.uix.button import Button
+kivy.require('1.0.0')
 
-greets = ['Greetings', 'Hi', 'Howdy', 'Bonjour', 'Hey', 'Howdy-Do', "What's Up", 'Hello']
-planet = ['World', 'Earth', 'Nature', 'Cosmos', 'Macrocosm', 'Universe', 'Terra']
+greets = ['Greetings', 'Hi', 'Howdy', 'Bonjour', 'Hey', 'Howdy-Do', "What's Up", 'Hello', 'Yo']
+planet = ['World', 'Earth', 'Nature', 'Cosmos', 'Macrocosm', 'Universe', 'Terra', 'Round Not Flat Planet']
+greeting = "{0} {1}".format(greets[randint(1, len(greets)-1)], planet[randint(1, len(planet)-1)])
+
+
+class HelloWorldApp(App):
+    def build(self):
+        return Button(text=greeting)
+
 
 if __name__ == '__main__':
-
-    print("{0} {1}".format(greets[randint(1, len(greets)-1)], planet[randint(1, len(planet)-1)], end=""))
+    print(greeting)
+    HelloWorldApp().run()
